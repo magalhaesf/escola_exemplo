@@ -4,12 +4,10 @@ public class MateriaDto {
     
     private String nome;
 
+    private ProfessorDto professorDto;
+
     @Deprecated
     public MateriaDto() {
-    }
-
-    public MateriaDto(String nome) {
-        this.nome = nome;
     }
 
     public String getNome() {
@@ -20,8 +18,18 @@ public class MateriaDto {
         this.nome = nome;
     }
 
+    public ProfessorDto getProfessorDto() {
+        return professorDto;
+    }
+
+    public void setProfessorDto(ProfessorDto professorDto) {
+        this.professorDto = professorDto;
+    }
+
     @Override
     public String toString() {
-        return "MateriaDto [nome=" + nome + "]";
-    }
+        return "MateriaDto [nome=" + nome + ", professorDto=" + professorDto + "]";
+    }    
+    
+   
 }
